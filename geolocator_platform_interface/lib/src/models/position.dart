@@ -110,8 +110,8 @@ class Position {
   }
 
   /// Converts the supplied [Map] to an instance of the [Position] class.
-  static Position fromMap(dynamic message) {
-    final Map<dynamic, dynamic> positionMap = message;
+  static Position fromMap(Map<String, dynamic> message) {
+    final Map<String, dynamic> positionMap = message;
 
     if (!positionMap.containsKey('latitude')) {
       throw ArgumentError.value(positionMap, 'positionMap',
